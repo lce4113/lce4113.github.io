@@ -1,6 +1,8 @@
 function TitleSlide() {
   return (
-    <div>asdf</div>
+    <h1 className="font-bold underline">
+      Hello world!
+    </h1>
   )
 }
 
