@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+# scripts
+/publish.sh
+
 # misc
 .DS_Store
 .env.local
