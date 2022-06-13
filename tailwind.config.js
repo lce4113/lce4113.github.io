@@ -2,6 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx}"],
   theme: {
+    extend: {
+      width: {
+        '15': '3.8rem'
+      },
+      height: {
+        '15': '3.8rem'
+      }
+    },
     fontFamily: {
       sans: ["Roboto", "sans-serif"],
       serif: ["Georgia", "serif"],
