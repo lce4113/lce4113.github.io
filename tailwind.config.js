@@ -8,15 +8,15 @@ module.exports = {
       },
       height: {
         '15': '3.8rem'
+      },
+      fontSize: {
+        '10xl': '10rem'
       }
     },
     fontFamily: {
       sans: ["Roboto", "sans-serif"],
       serif: ["Georgia", "serif"],
-      mono: ["Menlo", "Monaco", "Consolas", "monospace"],
-    },
-    fontSize: {
-      '10xl': '10rem'
+      mono: ["Inconsolata", "monospace"],
     }
   },
   plugins: [],

@@ -1,8 +1,12 @@
 import TitleSlide from "./title slide";
+import Navbar from "./navbar";
 
 function App() {
   return (
-    <TitleSlide />
+    <>
+      <TitleSlide />
+      <Navbar />
+    </>
   );
 }
 
