@@ -15,16 +15,16 @@ export default function TitleSlide() {
         Om Mahesh
       </h1>
       <div className="flex items-center">
-        <Icon src={discord} alt="Discord" link="https://discordapp.com/users/712836610139488346/"></Icon>
-        <div className="w-5 h-5 rounded-full bg-white mx-4"></div>
-        <Icon src={github} alt="Github" link="https://github.com/lce4113/"></Icon>
-        <div className="w-5 h-5 rounded-full bg-white mx-4"></div>
-        <Icon src={email} alt="Email" link="mailto:2om.mahesh@gmail.com"></Icon>
-        <div className="w-5 h-5 rounded-full bg-white mx-4"></div>
-        <Icon src={instagram} alt="Instagram" link="https://www.instagram.com/lce4113/"></Icon>
-        <div className="w-5 h-5 rounded-full bg-white mx-4"></div>
+        <Icon src={discord} alt="Discord" link="https://discordapp.com/users/712836610139488346/"></Icon> <Dot />
+        <Icon src={github} alt="Github" link="https://github.com/lce4113/"></Icon> <Dot />
+        <Icon src={email} alt="Email" link="mailto:2om.mahesh@gmail.com"></Icon> <Dot />
+        <Icon src={instagram} alt="Instagram" link="https://www.instagram.com/lce4113/"></Icon> <Dot />
         <Icon src={linkedin} alt="LinkedIn" link="https://www.linkedin.com/in/om-mahesh-a76025224/"></Icon>
       </div>
     </figure>
   )
+}
+
+function Dot() {
+  return <div className="w-4 h-4 rounded-full bg-white/80 mx-4"></div>;
 }

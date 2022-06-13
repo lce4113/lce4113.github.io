@@ -4,3 +4,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.w-screen {
+  width: 100vw;
+  max-width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+  padding: 2px;
+}
+::-webkit-scrollbar-track {
+  background: #4d4d4d;
+}
+::-webkit-scrollbar-thumb {
+  background: #6f6f6f;
+  border-radius: 7px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7f7f7f;
+}

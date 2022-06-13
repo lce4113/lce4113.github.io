@@ -8,9 +8,9 @@ export default function Navbar() {
             OM
           </a>
         </li>
-        <Link content="About Me" />
-        <Link content="Projects" />
-        <Link content="Accomplishments" />
+        <Link content="About Me" href="#about-me" />
+        <Link content="Projects" href="#projects" />
+        <Link content="Accomplishments" href="#accomplishments" />
       </ul>
     </nav>
   );
@@ -19,7 +19,7 @@ export default function Navbar() {
 function Link(props) {
   return (
     <li className="mx-6">
-      <a href="." className="">
+      <a href={props.href} className="">
         <pre className="text-white text-2xl hover:underline">{props.content}</pre>
       </a>
     </li>
