@@ -28,3 +28,13 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #7f7f7f;
 }
+
+.navbar-scrolled {
+  @apply py-1.5;
+}
+.navbar-scrolled #OM {
+  @apply text-3xl mx-3;
+}
+.navbar-scrolled pre {
+  @apply text-xl mx-4;
+}

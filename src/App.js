@@ -9,8 +9,8 @@ function App() {
     <>
       <TitleSlide />
       <AboutMe />
-      <Projects id="projects" />
-      <Accomplishments id="accomplishments" />
+      <Projects />
+      <Accomplishments />
       <Navbar />
     </>
   );

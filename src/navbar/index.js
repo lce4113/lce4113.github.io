@@ -1,10 +1,22 @@
+import { useEffect } from "react";
+
 export default function Navbar() {
+  useEffect(() => {
+    document.onscroll = () => {
+      if (window.scrollY > 150) {
+        document.querySelector("nav").classList.add("navbar-scrolled");
+      } else {
+        document.querySelector("nav").classList.remove("navbar-scrolled");
+      }
+    };
+  });
+
   return (
-    <nav className="fixed top-0 w-screen bg-black/25 py-2 hover:bg-black/50">
+    <nav className="transition-all fixed top-0 w-screen bg-black/25 py-2 hover:bg-black/50">
       <ul className="flex items-center">
-        <li className="mx-4">
-          <a href="."
-            className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#32FFAF] to-[#32AFFF]">
+        <li>
+          <a id="OM" href="."
+            className="transition-all mx-4 text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#32FFAF] to-[#32AFFF]">
             OM
           </a>
         </li>
@@ -18,9 +30,9 @@ export default function Navbar() {
 
 function Link(props) {
   return (
-    <li className="mx-6">
+    <li>
       <a href={props.href} className="">
-        <pre className="text-white text-2xl hover:underline">{props.content}</pre>
+        <pre className="transition-all mx-6 text-white text-2xl hover:underline">{props.content}</pre>
       </a>
     </li>
   );
