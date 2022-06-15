@@ -11,7 +11,7 @@ export default function TitleSlide() {
     <figure className="flex flex-col w-screen h-screen items-center justify-center">
       <Waves />
       <h1 contentEditable="true"
-        className="leading-tight text-10xl text-transparent bg-clip-text bg-gradient-to-r from-[#32FFAF] to-[#32AFFF] outline-none">
+        className="leading-tight text-10xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#32FFAF] to-[#32AFFF] outline-none">
         Om Mahesh
       </h1>
       <div className="flex items-center">

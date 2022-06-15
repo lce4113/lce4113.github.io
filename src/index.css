@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Roboto:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700;900&family=Roboto:wght@400;900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -37,4 +36,8 @@ html {
 }
 .navbar-scrolled pre {
   @apply text-xl mx-4;
+}
+
+.text-shadow {
+  text-shadow: 0 0.5rem 0 rgba(255, 255, 255, 0.3);
 }
