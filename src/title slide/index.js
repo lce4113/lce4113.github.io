@@ -12,7 +12,7 @@ export default function TitleSlide() {
       <Waves />
       <h1 contentEditable="true"
         suppressContentEditableWarning="true"
-        className="leading-tight text-10xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#32FFAF] to-[#32AFFF] outline-none">
+        className="leading-tight text-[10rem] font-black text-transparent bg-clip-text bg-gradient-to-r from-[#32FFAF] to-[#32AFFF] outline-none">
         Om Mahesh
       </h1>
       <div className="flex items-center">

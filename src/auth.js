@@ -1,13 +1,13 @@
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
-let authed = false;
+let admin = false;
 const auth = getAuth();
 auth.onAuthStateChanged(user => {
   const email = localStorage.getItem("email");
   if ((!user || email !== user.email) && email) {
     const password = prompt("Password?");
     signInWithEmailAndPassword(auth, email, password)
-      .then(() => authed = true)
+      .then(() => admin = true)
       .catch(e => {
         console.log(e.message);
         if (e.message === "Firebase: Error (auth/wrong-password).") alert("Wrong Password");
@@ -15,4 +15,4 @@ auth.onAuthStateChanged(user => {
   }
 });
 
-export default authed;
+export default admin;

@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { collection, doc, getDocs, getFirestore, setDoc } from "firebase/firestore";
+import { collection, deleteDoc, doc, getDocs, getFirestore, setDoc } from "firebase/firestore";
 
 class Database {
   constructor() {
@@ -17,19 +17,18 @@ class Database {
     getAnalytics();
   }
 
-  async getData(coll) {
+  async getData(section) {
     console.log("reading");
-    const docSnap = await getDocs(collection(this.db, coll))
+    const docSnap = await getDocs(collection(this.db, section))
     return docSnap.docs.map(x => x.data());
   }
-  async setData(coll, project) {
-    await setDoc(doc(this.db, coll, project.title), project);
+  async setData(section, data) {
+    await setDoc(doc(this.db, section, data.title), data);
   }
-
-  async getProjects() { return await this.getData("Projects"); }
-  async setProject(project) { await this.setData("Projects", project); }
-  async getAccomp() { return await this.getData("Accomplishments"); }
-  async setAccomp(accomp) { await this.setData("Accomplishments", accomp); }
+  async deleteData(section, title) {
+    try { await deleteDoc(doc(this.db, section, title)); }
+    catch (e) { console.log(e); }
+  }
 }
 
 export const database = new Database();
