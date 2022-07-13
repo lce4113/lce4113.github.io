@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { collection, deleteDoc, doc, getDocs, getFirestore, setDoc } from "firebase/firestore";
+import { collection, deleteDoc, doc, getDocs, getFirestore, increment, serverTimestamp, setDoc, updateDoc } from "firebase/firestore";
 
 class Database {
   constructor() {
@@ -27,6 +27,11 @@ class Database {
   }
   async deleteData(section, title) {
     try { await deleteDoc(doc(this.db, section, title)); }
+    catch (e) { console.log(e); }
+  }
+
+  async click(section, title) {
+    try { await updateDoc(doc(this.db, section, title), { clicks: increment(1), lastClick: serverTimestamp() }); }
     catch (e) { console.log(e); }
   }
 }

@@ -15,12 +15,22 @@ module.exports = {
         'slideIn': {
           '0%': { transform: "translateY(30px)" },
           '100%': { transform: "translateY(0px)" }
-        }
+        },
+        'dropdown': {
+          '0%': { opacity: 0, transform: "translateY(-15px)" },
+          '100%': { opacity: 1, transform: "translateY(0px)" }
+        },
+        'rotate': {
+          '0%': { transform: "rotate(0deg)" },
+          '100%': { transform: "rotate(180deg)" }
+        },
       },
       animation: {
         'fadeIn': 'fadeIn 0.5s ease-in-out',
         'fadeOut': 'fadeOut 0.5s ease-in-out',
-        'slideIn': 'slideIn 0.5s'
+        'slideIn': 'slideIn 0.5s',
+        'dropdown': 'dropdown 0.3s',
+        'rotate': 'rotate 0.5s',
       }
     },
     fontFamily: {

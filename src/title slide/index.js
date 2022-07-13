@@ -1,5 +1,4 @@
 import Waves from "./Wave";
-import Icon from "./Icon";
 import discord from "../assets/discord.png";
 import github from "../assets/github.png";
 import email from "../assets/email.png";
@@ -26,4 +25,14 @@ export default function TitleSlide() {
   )
 }
 
-const Dot = () => <div className="w-4 h-4 rounded-full bg-white/80 mx-4"></div>;
+const Icon = ({ link, src, alt }) =>
+  <a className="group relative w-16 h-16" href={link} target="_blank" rel="noopener noreferrer">
+    <div className="flex justify-center items-center absolute w-[3.8rem] h-[3.8rem] rounded-xl bg-white transition-transform group-hover:scale-125">
+      <img
+        className="absolute w-14 rounded-xl transition-transform group-hover:scale-90"
+        src={src} alt={alt} />
+    </div>
+  </a>
+
+const Dot = () =>
+  <div className="w-3 h-3 rounded-full bg-white/80 mx-4" />
