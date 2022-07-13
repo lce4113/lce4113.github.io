@@ -58,12 +58,8 @@ export default function AboutMe() {
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-8xl text-white font-black text-shadow">About Me...</h2>
           <div className="flex items-center">
-            <div className="text-white mr-4 text-lg">Last Updated</div>
-            <div className="relative">
-              <div className="px-4 py-2 text-white bg-[#4B4B4B] rounded-md font-medium text-lg">
-                {lastUpdated}
-              </div>
-            </div>
+            <div className="text-white mr-4 text-lg whitespace-nowrap">Last Updated</div>
+            <div className="px-4 py-2 text-white bg-[#4B4B4B] rounded-md font-medium text-lg whitespace-nowrap">{lastUpdated}</div>
           </div>
         </div>
         <div className="relative text-white">
