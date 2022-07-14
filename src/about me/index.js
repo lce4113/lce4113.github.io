@@ -36,14 +36,14 @@ export default function AboutMe() {
   };
 
   const process = processString([{
-    regex: /\[(.+)\]\((.+)\)/g,
+    regex: /\[([^\]]+)\]\(([^)]+)\)/g,
     fn: (key, result) => <Link key={key} content={result[1]} href={result[2]} />
   }, {
     regex: /\n/g,
     fn: (key) => <br key={key} />
   }, {
     regex: /(•[^\n]+)/g,
-    fn: (key, result) => <span key={key} className="font-bold">{result[1]}</span>
+    fn: (key, result) => <span key={key} className="text-xl text-white font-bold">{result[1]}</span>
   }]);
 
   return (
@@ -55,16 +55,18 @@ export default function AboutMe() {
         close={() => setFormOpen(false)}
         onSubmit={formOnSubmit} />}
       <div className="w-9/12">
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between mb-12">
           <h2 className="text-8xl text-white font-black text-shadow">About Me...</h2>
           <div className="flex items-center">
             <div className="text-white mr-4 text-lg whitespace-nowrap">Last Updated</div>
-            <div className="px-4 py-2 text-white bg-[#4B4B4B] rounded-md font-medium text-lg whitespace-nowrap">{lastUpdated}</div>
+            <div className="px-4 py-2 text-white bg-[#4B4B4B] rounded-md font-medium text-lg whitespace-nowrap">
+              {lastUpdated}
+            </div>
           </div>
         </div>
-        <div className="relative text-white">
+        <div className="relative">
           {admin && <Edit editClick={editClick} />}
-          <p> {process(description)} </p>
+          <p className="text-lg text-white/[0.65]">{process(description)}</p>
         </div>
       </div>
     </div>
@@ -77,4 +79,4 @@ const Edit = ({ editClick }) =>
   </div>
 
 const Link = ({ href, content }) =>
-  <a className="text-[#5BDFDF]/75 underline hover:text-[#5BDFDF]" href={href} target="_blank" rel="noreferrer">{content}</a>
+  <a className="text-[#5BDFDF]/75 underline hover:text-[#5BDFDF]" href={href}>{content}</a>

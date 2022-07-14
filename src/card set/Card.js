@@ -30,7 +30,7 @@ export default function Card({ title, data, onEdit }) {
     fn: (key, result) => <Link key={key} content={result[1]} href={result[2]} />
   }]);
   return (
-    <div onClick={() => open(data.link)} className="w-96 my-4 mr-8 px-6 pt-5 pb-16 cursor-pointer bg-white/[.15] relative group transition-all duration-300 hover:scale-105">
+    <div onClick={() => open(data.link)} className="w-96 my-4 mr-8 px-6 pt-5 pb-16 cursor-pointer bg-white/[.15] relative group transition-all duration-300 hover:bg-white/25 hover:scale-105">
       {admin && <Edit editClick={editClick} />}
       <h3 className="inline-block text-2xl text-transparent bg-clip-text bg-gradient-to-r from-[#98FFD7] to-[#98D7FF]
         font-mono font-black transition-all duration-500">{data.title}</h3>
@@ -48,4 +48,4 @@ const Edit = ({ editClick }) =>
   </div>
 
 const Link = ({ href, content }) =>
-  <a className="text-[#5BDFDF]/75 underline hover:text-[#5BDFDF]" href={href} target="_blank" rel="noreferrer">{content}</a>
+  <a className="text-[#5BDFDF]/75 underline hover:text-[#5BDFDF]" href={href}>{content}</a>

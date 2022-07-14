@@ -49,5 +49,5 @@ export default function Form({ title, fieldTypes, fieldValues, setFieldValues, c
 
 const Submit = ({ onSubmit }) =>
   <button
-    className="px-2 py-1 mt-6 self-end cursor-pointer rounded-md text-right text-xl font-black text-white bg-gradient-to-r from-[#329664] to-[#3296B9] brightness-90 hover:brightness-100"
+    className="px-2 py-1 mt-6 self-end cursor-pointer rounded-md text-right text-xl font-bold bg-[#32A8A8] text-white brightness-90 hover:brightness-100"
     onClick={onSubmit}>Save</button>;

@@ -58,7 +58,7 @@ export default function CardSet({ title, id, sorts, fieldTypes, fieldInitialValu
         onSubmit={formOnSubmit}
         onDelete={editing && formOnDelete} />}
       <div className="w-9/12">
-        <div className="w-full mb-8 flex justify-between items-center">
+        <div className="w-full mb-12 flex justify-between items-center">
           <h2 className="text-8xl text-white font-black text-shadow">{title}...</h2>
           <Sort sorts={sorts} setSort={setSort} />
         </div>
