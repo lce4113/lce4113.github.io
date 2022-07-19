@@ -47,7 +47,7 @@ export default function AboutMe() {
   }]);
 
   return (
-    <div id="about-me" className="flex justify-center items-center w-screen py-24 bg-[#333333]">
+    <div id="about-me" className="flex justify-center items-center w-screen pt-24 pb-60 bg-[#333333]">
       {formOpen && <Form title="About Me"
         fieldTypes={{ "description": "text-expand" }}
         fieldValues={fieldValues}

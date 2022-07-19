@@ -13,8 +13,10 @@ export default function CardSet({ title, id, sorts, fieldTypes, fieldInitialValu
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
-    database.getData(title).then(x => setCards(x))
-  }, [title]);
+    database.getData(title).then(x => {
+      setCards([...x].sort(sorts[0].func));
+    });
+  }, [title, sorts]);
   useEffect(() => {
     const auth = getAuth();
     auth.onAuthStateChanged(user => { if (user) setAdmin(true); });
@@ -43,13 +45,10 @@ export default function CardSet({ title, id, sorts, fieldTypes, fieldInitialValu
     window.location.reload();
   };
 
-  const setSort = sortFunc => {
-    console.log(cards, sortFunc);
-    setCards([...cards].sort(sortFunc));
-  }
+  const setSort = sortFunc => setCards([...cards].sort(sortFunc));
 
   return (
-    <div id={id} className="flex justify-center items-center w-screen py-24 bg-[#333333]">
+    <div id={id} className="flex justify-center items-center w-screen pt-24 pb-60 bg-[#333333]">
       {formOpen && <Form title={title}
         fieldTypes={fieldTypes}
         fieldValues={fieldValues}

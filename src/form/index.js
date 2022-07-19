@@ -18,7 +18,9 @@ export default function Form({ title, fieldTypes, fieldValues, setFieldValues, c
         {onDelete && <div className="self-end absolute opacity-50 hover:opacity-80 cursor-pointer" onClick={() => onDelete(fieldValues.title)}>
           <img src={trash} alt="Trash" className="w-6 invert" />
         </div>}
-        <h3 className="leading-normal text-5xl font-black text-center text-transparent bg-clip-text bg-gradient-to-r from-[#7DFFAF] to-[#7DAFFF]">{title}</h3>
+        <div className="flex justify-center">
+          <h3 className="leading-normal text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#98FFD7] to-[#98D7FF]">{title}</h3>
+        </div>
         <div className="px-4 overflow-auto">
           {Object.entries(fieldTypes).map(([name, type]) => {
             switch (type) {
