@@ -43,7 +43,7 @@ export default function AboutMe() {
     fn: (key) => <br key={key} />
   }, {
     regex: /(•[^\n]+)/g,
-    fn: (key, result) => <span key={key} className="text-xl text-white font-bold">{result[1]}</span>
+    fn: (key, result) => <span key={key} className="text-2xl text-white/[0.9] font-bold">{result[1]}</span>
   }]);
 
   return (
@@ -66,7 +66,7 @@ export default function AboutMe() {
         </div>
         <div className="relative">
           {admin && <Edit editClick={editClick} />}
-          <p className="text-lg text-white/[0.65]">{process(description)}</p>
+          <p className="text-xl text-white/[0.65]">{process(description)}</p>
         </div>
       </div>
     </div>
