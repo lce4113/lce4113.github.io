@@ -12,7 +12,7 @@ export default function Navbar() {
   });
 
   return (
-    <nav className="transition-all duration-300 fixed top-0 w-screen bg-black/25 py-2 hover:bg-black/50">
+    <nav className="transition-all duration-300 fixed top-0 w-screen bg-black/25 backdrop-blur-sm py-2 hover:bg-black/50">
       <ul className="flex items-center">
         <li>
           <a id="OM" href="."
