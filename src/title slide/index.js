@@ -1,4 +1,4 @@
-import Waves from "./Wave";
+import Waves from "./wave.js";
 import discord from "../assets/discord.png";
 import github from "../assets/github.png";
 import email from "../assets/email.png";
